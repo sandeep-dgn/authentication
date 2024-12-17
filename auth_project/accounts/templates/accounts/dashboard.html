@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, {{ request.user.username }}</h2>
+    <p>Role-based Content:</p>
+    {% if 'Admin' in user_groups %}
+        <p>You are an Admin!</p>
+    {% elif 'User' in user_groups %}
+        <p>You are a regular User.</p>
+    {% else %}
+        <p>Your role is undefined.</p>
+    {% endif %}
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>

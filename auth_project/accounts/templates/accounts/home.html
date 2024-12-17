@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome to Our Website</h1>
+    <p>Please login or sign up to access your dashboard.</p>
+    
+    <!-- Buttons to redirect to login and register pages -->
+    <div>
+        <a href="{% url 'login' %}">
+            <button>Login</button>
+        </a>
+        <a href="{% url 'register' %}">
+            <button>Sign Up</button>
+        </a>
+    </div>
+</body>
+</html>
